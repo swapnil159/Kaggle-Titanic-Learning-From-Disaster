@@ -132,7 +132,7 @@ test  = test.values
 
 # Classifier
 ## Using Support Vector Machine classifier
-clf=SVC(C=5.0)
+clf=SVC(C=5.0,gamma='auto')
 clf.fit(train[0:,1:],train[0:,0])
 pred=clf.predict(test)
 print(pred)
