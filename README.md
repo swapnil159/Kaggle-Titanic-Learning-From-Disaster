@@ -1,6 +1,6 @@
 # Kaggle-Titanic-Learning-From-Disaster
 ML implemenation on Titanic dataset on Kaggle
 
-# RANK: 1102/10379 (at the time of submission)
+# RANK: 749/9537 (at the time of submission)
 
-# SCORE: 0.80382
+# SCORE: 0.80861
