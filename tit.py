@@ -103,8 +103,8 @@ for data in full_data:
 	data['Sex']=data['Sex'].map({'female':0,'male':1}).astype(int)
 	## Mapping Titles
 	Title_mapping={'Mr':1,'Miss':2,'Mrs':3,'Master':4,'Other':5}
-	data['title']=data['Title'].map(Title_mapping).astype(int)
-	data['Title']=data['title'].fillna(0)
+	data['Title']=data['Title'].map(Title_mapping).astype(int)
+	data['Title']=data['Title'].fillna(0)
 	## Mapping Embarked
 	data['Embarked']=data['Embarked'].map({'S':0,'C':1,'Q':2}).astype(int)
 	## Mapping Age
@@ -122,7 +122,7 @@ for data in full_data:
 	data['Fare']=data['Fare'].astype(int)
 
 # Feature Selection
-drop_elements = ['PassengerId','Ticket','Parch','Name','SibSp','Cabin','Family']
+drop_elements = ['PassengerId','Ticket','Parch','Name','SibSp','Cabin','Family','Age']
 train = train.drop(drop_elements, axis = 1)
 train = train.drop(['CatFare','CatAge'], axis = 1)
 test  = test.drop(drop_elements, axis = 1)
