@@ -68,7 +68,7 @@ for data in full_data:
 	rand_list=np.random.randint(age_avg-age_std,age_avg+age_std,size=null_cnt)
 	data['Age'][np.isnan(data['Age'])]=rand_list
 	data['Age']=data['Age'].astype(int)
-## Since Fare has many discrete values therefore categorizing Age into 5 intervals
+## Since Age has many discrete values therefore categorizing Age into 5 intervals
 train['CatAge']=pd.qcut(train['Age'],5)
 print(train[['CatAge','Survived']].groupby(['CatAge'],as_index=False).mean())
 
